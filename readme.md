@@ -1,1 +1,1 @@
-## This Repository consist of Coding Problems with Solution
+## This Repository consist of Coding Problems and it's Solution
