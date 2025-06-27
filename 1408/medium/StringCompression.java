@@ -22,21 +22,23 @@ public class StringCompression {
                 characterCount++;
                 previousCharacter = string.charAt(left);
             } else {
-                if(characterCount == 1) {
-                    returningString.append(previousCharacter);
-                    characterCount = 1;
-                } else {
+                if(characterCount > 1) {
                     returningString.append(previousCharacter);
                     returningString.append(characterCount);
-                    previousCharacter = string.charAt(left);
                     characterCount = 1;
+                    previousCharacter = string.charAt(left); 
+                } else {
+                    returningString.append(previousCharacter);
+                    previousCharacter = string.charAt(left);
                 }
             }
-            if(left == string.length() - 1) {
+            if(left == string.length() - 1 && characterCount > 1) {
                 returningString.append(previousCharacter);
                 returningString.append(characterCount);
+            } else if(left == string.length() - 1 && characterCount == 1) {
+                returningString.append(previousCharacter);
             }
-        }
+        } 
         return returningString.toString();
     }
 }
