@@ -13,15 +13,16 @@ public class MissingNumberTwoPointer {
     }
 
     public static int missingNumber(int[] arr) {
+        int n = arr.length - 1;
         if(arr.length == 0) {
             return 1;
         } else if(arr[0] != 1) {
             return 1;
-        } else if(arr[arr.length - 1] == (arr.length - 1)) {
+        } else if(arr[n - 1] == (n - 1)) {
             return arr.length;
         } else {
-            int leftCheck = arr[0], rightCheck = arr[arr.length - 1];
-            for(int left = 1, right = arr.length - 2 ; left < right ; left++, right--, leftCheck++, rightCheck--) {
+            int leftCheck = arr[0], rightCheck = arr[n - 1];
+            for(int left = 1, right = n - 2 ; left < right ; left++, right--, leftCheck++, rightCheck--) {
                 if(arr[left] != leftCheck) {
                     return leftCheck;
                 }
