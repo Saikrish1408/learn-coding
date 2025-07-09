@@ -35,8 +35,6 @@ public class SortColor {
             }
         }
     }
-
-
     public static void swap(int right, int left, int[] arr) {
         int temp = arr[right];
         arr[right] = arr[left];
