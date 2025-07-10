@@ -15,7 +15,7 @@ public class LongestSubArraywithCondition {
 
     public static int maxLengthOfSubArray(int[] arr, int k) {
         int maxLength = 0;
-        
+        // to-do
         return maxLength;
     }
 }
