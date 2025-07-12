@@ -31,6 +31,9 @@ public class LongestSubStringWithoutRepeated {
         if(string.startsWith(" ")) {
             return 1;
         }
+        if(string.length() <= 1) {
+            return string.length();
+        }
         int maxLength = 0, left = 0, right = 0, length = 0;
         HashSet<Character> hashSet = new HashSet<>();
         while(right < string.length()) {
