@@ -40,16 +40,13 @@ public class MaxConsecutiveOnes {
             if(arr[right] == 0) {
                 zeros += 1;
             }
-
             if(zeros > k) {
                 if(arr[left] == 0) zeros--;
                 left++;
             }
-
             if(zeros <= k) {
                 maxLength = Math.max(maxLength, (right - left + 1));
             }
-
             right++;
         }
         return maxLength;
